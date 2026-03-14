@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+
+    <section class="container">
+        <div class="header-to-do">
+            <h1>To-Do List</h1>
+        </div>
+        <div class="input-add">
+            <input type="text" id="tarefa" placeholder="Adicionar nova tarefa..." autocomplete="off">
+            <button onclick="add()" id="btn-add">Adicionar</button>
+        </div>
+        <div class="pendente">
+            <h2>Tarefas Pendentes</h2>
+            <div id="tarefasPendentes"></div>
+        </div>
+        <div class="concluidas">
+            <h2>Tarefas Concluídas</h2>
+            <div id="tarefasConcluidas"></div>
+        </div>
+    </section>
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
