@@ -11,6 +11,9 @@ function add() {
 
     let tarefa = document.createElement("div")
 
+    let checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+
     let pendentes = document.createElement("p");
     pendentes.textContent = InputTarefas.value;
     InputTarefas.value = "";
@@ -18,10 +21,14 @@ function add() {
     let apagar = document.createElement("button");
     apagar.textContent = "🗑️";
 
-    TarefasPendentes.appendChild(pendentes);
-    TarefasPendentes.append(apagar);
-
-    let apagarbtn = addEventListener('click', function() {
+    apagar.addEventListener('click', function() {
         tarefa.remove()
-    })
+    });
+
+    checkbox.addEventListener('click', function() {
+        TarefasConcluidas.append(tarefa);
+    });
+
+    tarefa.append(checkbox, pendentes, apagar);
+    TarefasPendentes.appendChild(tarefa);
 }
